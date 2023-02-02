@@ -299,7 +299,11 @@ class Native implements Serializable
     {
         if ($this->reflector === null) {
             $this->code = null;
-            $this->reflector = new ReflectionClosure($this->closure);
+            if (get_class($this->closure) === "Laravel\SerializableClosure\Serializers\Native"){
+                $this->reflector = new ReflectionClosure($this->closure->getClosure());
+            } else {
+                $this->reflector = new ReflectionClosure($this->closure);
+            }
         }
 
         return $this->reflector;
