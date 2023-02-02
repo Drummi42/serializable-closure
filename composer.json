@@ -1,5 +1,5 @@
 {
-    "name": "drummi42/serializable-closure",
+    "name": "laravel/serializable-closure",
     "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
     "keywords": ["laravel", "Serializable", "closure"],
     "license": "MIT",
